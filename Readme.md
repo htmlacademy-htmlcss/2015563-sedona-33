@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [ROBINSON ELENA](https://up.htmlacademy.ru/htmlcss/33/user/2015563).
-* Наставник: `Андрей Зинченко`.
+* Наставник: [Андрей Зинченко](https://htmlacademy.ru/profile/id925509).
 
 ---
 
