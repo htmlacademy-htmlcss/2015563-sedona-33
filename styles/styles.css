@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #E5E5E5;
+}
+
+.page-header {
+  color: #000000;
+  background: #ffffff;
+}
+
+/* logo */
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: left;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.main-index {
+  text-align: center;
+  background-image: url("../images/mountain-welcome.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.promo-text {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-transform: uppercase;
+}
+
+.advantages-title {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.advantages-block {
+  color: #ffffff;
+  background-color: #83B3D3;
+}
+
+.advantages-block-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.advantages-item-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-text {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.search-button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756257;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  line-height: 26px;
+  color: #333333;
+  background-color: #ffffff;
+  text-align: center;  
+}
+
+.subscription {
+  color: #ffffff;
+  background-color: #83B3D3;
+  background-image: url("../images/mountain-footer.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.subscription-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscription-description {
+  font-size: 22px;
+}
+
+.contact-address {
+  font-style: normal;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration-line: none;
+  text-transform: uppercase;
+  color: #000000;
+}
