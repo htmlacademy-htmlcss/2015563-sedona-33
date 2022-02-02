@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: bold;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -19,41 +19,45 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #E5E5E5;
+  background-color: #f2f2f2;
 }
 
 .page-header {
-  color: #000000;
   background: #ffffff;
 }
-
-/* logo */
 
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  text-align: left;
   color: #000000;
-  background-color: #ffffff;
   text-decoration: none;
+}
+
+.navigation-link--buttom {
+  color: #ffffff;
+  background-color: #756257;
+  text-transform: uppercase;
 }
 
 .main-index {
   text-align: center;
-  background-image: url("../images/mountain-welcome.jpg");
+  background-color: #ffffff;
+}
+
+.promo {
+  background: url("../images/divider.svg") bottom, url("../images/mountain-welcome.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: cadetblue;
 }
 
 .promo-text {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-align: center;
-  color: #000000;
-  background-color: #ffffff;
   text-transform: uppercase;
+  
 }
 
 .advantages-title {
@@ -61,10 +65,9 @@ body {
   line-height: 36px;
   font-weight: 400;
   color: #333333;
-  background-color: #ffffff;
 }
 
-.advantages-block {
+.advantages-block-text {
   color: #ffffff;
   background-color: #83B3D3;
 }
@@ -76,9 +79,8 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-list {
-  color: #000000;
-  background-color: #ffffff;
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);;
 }
 
 .advantages-item-title {
@@ -88,9 +90,15 @@ body {
   text-transform: uppercase;
 }
 
-.search {
-  color: #000000;
+.advantages-item-food {
   background-color: #ffffff;
+}
+
+.advantages-item-road {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.search {
 }
 
 .search-title {
@@ -105,7 +113,6 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
-  background-color: #ffffff;
 }
 
 .search-button {
@@ -113,7 +120,6 @@ body {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  text-align: center;
   color: #ffffff;
   background-color: #756257;
   text-decoration: none;
@@ -144,6 +150,16 @@ body {
 
 .subscription-description {
   font-size: 22px;
+}
+
+.subscription-button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-transform: uppercase;
 }
 
 .contact-address {
