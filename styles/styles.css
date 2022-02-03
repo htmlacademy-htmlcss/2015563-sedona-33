@@ -34,7 +34,7 @@ body {
   text-decoration: none;
 }
 
-.navigation-link--buttom {
+.navigation-link--button {
   color: #ffffff;
   background-color: #756257;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ body {
   background: url("../images/divider.svg") bottom, url("../images/mountain-welcome.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: cadetblue;
+  background-color: #5f9ea0;
 }
 
 .promo-text {
@@ -80,7 +80,11 @@ body {
 }
 
 .advantages-item {
-  background-color: rgba(131, 179, 211, 0.12);;
+  background-color: #F0F6FA;
+}
+
+.advantages-item:nth-child(2n) {
+  background-color: #ffffff;
 }
 
 .advantages-item-title {
@@ -90,12 +94,8 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-item-food {
-  background-color: #ffffff;
-}
-
-.advantages-item-road {
-  background-color: rgba(131, 179, 211, 0.2);
+.advantages-list--features .advantages-item:nth-child(2n) {
+  background-color: #E6F0F6;
 }
 
 .search {
