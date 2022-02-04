@@ -171,17 +171,16 @@ body {
   text-decoration-line: none;
 }
 
-.main-inner {
-  background: url("../images/filter-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+.main-inner {  
   font-size: 18px;
   line-height: 23px;
   color: #333333;
-  background-color: #ffffff;
 }
 
-.inner-header {
+.inner-block {
+  background: url("../images/filter-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   color: #ffffff;
   background-color: #83B3D3;
 }
