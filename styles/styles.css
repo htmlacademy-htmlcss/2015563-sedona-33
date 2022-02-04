@@ -175,6 +175,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+  background-color: #ffffff;
 }
 
 .inner-block {
@@ -225,6 +226,7 @@ body {
 
 .select {
   color: #000000;
+  
 }
 
 .select-filter {
@@ -315,5 +317,6 @@ body {
 }
 
 .subscription--no-image {
-  background-image: none
+  color: #000000;
+  background: #ffffff;
 }
