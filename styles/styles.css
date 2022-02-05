@@ -35,6 +35,7 @@ body {
 }
 
 .navigation-link--button {
+  font-family: "PT Sans", sans-serif;
   color: #ffffff;
   background-color: #756257;
   text-transform: uppercase;
@@ -56,8 +57,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-transform: uppercase;
-  
+  text-transform: uppercase;  
 }
 
 .advantages-title {
@@ -157,6 +157,7 @@ body {
   color: #ffffff;
   background-color: #83B3D3;
   text-transform: uppercase;
+  border: none
 }
 
 .contact-address {
@@ -197,14 +198,20 @@ body {
   text-decoration: none;
 }
 
+.catalog-filter-group {
+  border: none;
+}
 .catalog-filter {
   color: #ffffff;
-  background-color: #83B3D3;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
+}
+
+.button {
+  font-family: inherit;
 }
 
 .button--submit {
@@ -215,18 +222,20 @@ body {
   background: #83B3D3;
   text-align: center;
   text-transform: uppercase;
+  border: none;  
 }
 
 .button--reset {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
-  text-align: center
+  text-align: center;
+  border: none;
+  background-color: transparent;
 }
 
 .select {
-  color: #000000;
-  
+  color: #000000;  
 }
 
 .select-filter {
@@ -300,6 +309,7 @@ body {
   background: #83B3D3;
   text-align: center;
   text-transform: uppercase;
+  border: none;
 }
 
 .pagination-link {
