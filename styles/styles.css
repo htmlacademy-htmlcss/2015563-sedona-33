@@ -14,16 +14,49 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
+
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
 }
 
 .page-header {
   background: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin-left: 70px;
+}
+
+.navigation-list {
+  width: 460px;
+  margin-left: 30px;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 306px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -41,9 +74,25 @@ body {
   text-transform: uppercase;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .main-index {
   text-align: center;
   background-color: #ffffff;
+}
+
+.main-inner {  
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .promo {
@@ -60,6 +109,16 @@ body {
   text-transform: uppercase;  
 }
 
+.advantages {
+  display: block;
+} 
+
+.advantages-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
 .advantages-title {
   font-size: 22px;
   line-height: 36px;
@@ -68,6 +127,7 @@ body {
 }
 
 .advantages-block-text {
+  width: 400px;
   color: #ffffff;
   background-color: #83B3D3;
 }
@@ -79,7 +139,19 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-block-description {
+  width: 220px;
+  margin: 0 auto;
+}
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
 .advantages-item {
+  width: 400px;
   background-color: #F0F6FA;
 }
 
@@ -92,6 +164,11 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.advantages-description {
+  width: 250px;
+  margin: 0 auto;
 }
 
 .advantages-list--features .advantages-item:nth-child(2n) {
@@ -123,19 +200,13 @@ body {
   text-decoration: none;
 }
 
-.page-footer {
-  line-height: 26px;
-  color: #333333;
-  background-color: #ffffff;
-  text-align: center;  
-}
-
 .subscription {
+  display: block;
   color: #ffffff;
   background-color: #83B3D3;
   background-image: url("../images/mountain-footer.jpg");
   background-size: 100% auto;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }
 
 .subscription-title {
@@ -160,6 +231,29 @@ body {
   border: none
 }
 
+.page-footer {
+  line-height: 26px;
+  color: #333333;
+  background-color: #ffffff;
+  text-align: center;  
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  width: 160px;
+  margin-left: 72px;
+}
+
+.contacts {
+  width: 720px;
+  margin-left: 0 auto;
+}
+
 .contact-address {
   font-style: normal;
 }
@@ -172,11 +266,9 @@ body {
   text-decoration-line: none;
 }
 
-.main-inner {  
-  font-size: 18px;
-  line-height: 23px;
-  color: #333333;
-  background-color: #ffffff;
+.htmlacademy-link {
+  display: block;
+  margin-right: 72px;
 }
 
 .inner-block {
