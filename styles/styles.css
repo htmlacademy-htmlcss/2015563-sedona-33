@@ -14,7 +14,21 @@
   font-display: swap;
 }
 
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -23,7 +37,31 @@ body {
 }
 
 .page-header {
+  margin: 0 auto;
   background: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  padding: 0 70px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  margin-right: 30px;
+}
+
+.navigation-list {
+  display: flex;
+  max-width: 460px;   /*345+345/3*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-user {
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -35,9 +73,14 @@ body {
 }
 
 .navigation-link--button {
+  font-family: "PT Sans", sans-serif;
   color: #ffffff;
   background-color: #756257;
   text-transform: uppercase;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .main-index {
@@ -45,19 +88,40 @@ body {
   background-color: #ffffff;
 }
 
+.main-inner {  
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .promo {
   background: url("../images/divider.svg") bottom, url("../images/mountain-welcome.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #5f9ea0;
+  padding: 0 240px;
 }
 
 .promo-text {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-transform: uppercase;
-  
+  text-transform: uppercase;  
+}
+
+.advantages {
+  display: block;
+} 
+
+.advantages-block {
+  display: flex;
+  padding: 0;
 }
 
 .advantages-title {
@@ -68,6 +132,7 @@ body {
 }
 
 .advantages-block-text {
+  width: 400px;
   color: #ffffff;
   background-color: #83B3D3;
 }
@@ -79,8 +144,22 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-block-description {
+  margin: 0 auto;
+  padding: 0 90px;
+}
+
+.advantages-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .advantages-item {
+  width: 400px;
   background-color: #F0F6FA;
+  padding: 0 75px;
 }
 
 .advantages-item:nth-child(2n) {
@@ -92,6 +171,11 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.advantages-description {
+  margin: 0 auto;
+
 }
 
 .advantages-list--features .advantages-item:nth-child(2n) {
@@ -110,6 +194,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+  padding: 0 240px;
 }
 
 .search-button {
@@ -123,19 +208,15 @@ body {
   text-decoration: none;
 }
 
-.page-footer {
-  line-height: 26px;
-  color: #333333;
-  background-color: #ffffff;
-  text-align: center;  
-}
-
 .subscription {
+  display: block;
   color: #ffffff;
   background-color: #83B3D3;
   background-image: url("../images/mountain-footer.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
+  padding: 0 200px;
 }
 
 .subscription-title {
@@ -147,6 +228,7 @@ body {
 
 .subscription-description {
   font-size: 22px;
+  line-height: 26px;
 }
 
 .subscription-button {
@@ -157,6 +239,31 @@ body {
   color: #ffffff;
   background-color: #83B3D3;
   text-transform: uppercase;
+  border: none
+}
+
+.page-footer {
+  line-height: 26px;
+  color: #333333;
+  background-color: #ffffff;
+  text-align: center;  
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.footer-social-list {
+  width: 160px;
+  list-style: none;
+  padding: 0;
+}
+
+.contacts {
+  margin: 0 auto;
 }
 
 .contact-address {
@@ -171,11 +278,8 @@ body {
   text-decoration-line: none;
 }
 
-.main-inner {  
-  font-size: 18px;
-  line-height: 23px;
-  color: #333333;
-  background-color: #ffffff;
+.htmlacademy-link {
+  display: block;
 }
 
 .inner-block {
@@ -184,6 +288,7 @@ body {
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #83B3D3;
+  padding: 0 72px;
 }
 
 .inner-header-title {
@@ -197,14 +302,22 @@ body {
   text-decoration: none;
 }
 
+.catalog-filter-group {
+  border: none;
+}
+
 .catalog-filter {
   color: #ffffff;
-  background-color: #83B3D3;
+  display:flex;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
+}
+
+.button {
+  font-family: inherit;
 }
 
 .button--submit {
@@ -215,18 +328,21 @@ body {
   background: #83B3D3;
   text-align: center;
   text-transform: uppercase;
+  border: none;  
 }
 
 .button--reset {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
-  text-align: center
+  text-align: center;
+  border: none;
+  background-color: transparent;
 }
 
 .select {
   color: #000000;
-  
+  padding: 0 72px;
 }
 
 .select-filter {
@@ -241,6 +357,21 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+}
+
+.hotels {
+  margin: 0;
+  padding: 0 72px;
+}
+
+.hotel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hotels-column {
+  display: flex;
 }
 
 .hotel-card-link {
@@ -300,8 +431,13 @@ body {
   background: #83B3D3;
   text-align: center;
   text-transform: uppercase;
+  border: none;
 }
 
+.pagination {
+  margin: 0;
+  padding: 0 72px;
+}
 .pagination-link {
   font-size: 20px;
   line-height: 26px;
