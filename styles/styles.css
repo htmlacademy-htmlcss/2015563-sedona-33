@@ -49,6 +49,7 @@ body {
 }
 .page-header {
   margin: 0 auto;
+  padding: 0;
   background: #ffffff;
 }
 
@@ -71,15 +72,6 @@ body {
   list-style-type: none;
 }
 
-.navigation-user {
-  margin-left: auto;
-}
-
-.navigation-user .navigation-link { /*Почему пишем так?*/
-  min-width: 42px;
-  min-height: 66px;
-}
-
 .navigation-link {
   display: block;
   flex-wrap: wrap;
@@ -89,6 +81,11 @@ body {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-user {
+  margin-left: auto;
+  min-width: 42px;
 }
 
 .navigation-link--button {
@@ -214,13 +211,14 @@ body {
 }
 
 .search {
-  padding: 0 240px;
+  padding: 91px 240px 93px;
 }
 .search-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 29px;
 }
 
 .search-text {
@@ -228,6 +226,8 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+  margin: 0;
+  padding: 0;
 }
 
 .search-button {
