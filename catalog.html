@@ -208,33 +208,36 @@
   
         <section class="pagination">
           <h2 class="visually-hidden">Список страниц</h2>
-          <span class="pagination-filter">Гостиниц на странице:</span>
-          <select class="pagination-control" aria-label="Количество">
-            <option value="4">4</option>
-            <option value="2">2</option>
-            <option value="1">1</option>                             
-          </select>
+          <div class="pagination-container">
+            <ul class="pagination-list">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link pagination-last">10</a>
+              </li>
+            </ul>
+            <span class="pagination-filter">Гостиниц на странице:</span>
+            <select class="pagination-control" aria-label="Количество">
+              <option value="4">4</option>
+              <option value="2">2</option>
+              <option value="1">1</option>                             
+            </select>
+
+          </div>
   
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link pagination-last">10</a>
-            </li>
-          </ul>
         </section>
   
         <section class="subscription subscription--no-image">
