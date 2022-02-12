@@ -213,7 +213,9 @@ body {
 }
 
 .search {
-  padding: 91px 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 91px;
 }
 .search-title {
   font-size: 30px;
@@ -221,6 +223,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
+  margin-bottom: 29px;
 }
 
 .search-text {
@@ -228,8 +231,8 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
-  margin: 0;
-  margin-top: 29px;
+  margin-top: 0;
+  margin-bottom: 56px;
 }
 
 .search-button {
@@ -241,17 +244,21 @@ body {
   background-color: #756257;
   text-transform: uppercase;
   text-decoration: none;
+  margin: 0 312px;
+  max-width: 575px;
+  
 }
 
 .subscription {
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: #ffffff;
   background-color: #83B3D3;
   background-image: url("../images/mountain-footer.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 0 200px;
+  padding: 94px 200px;
 }
 
 .subscription-title {
@@ -259,11 +266,15 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 29px;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 46px;
 }
 
 .subscription-button {
@@ -476,7 +487,6 @@ body {
   display: flex;
   margin: 30px 72px 83px;
   padding: 0;
-
 }
 
 .pagination-list {
@@ -495,12 +505,10 @@ body {
   color: #ffffff;
   background: #83B3D3;
   text-align: center;
-
 }
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
-
 }
 
 .pagination-current {
