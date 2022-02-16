@@ -82,11 +82,11 @@ body {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+  min-width: 42px;
 }
 
 .navigation-user {
   margin-left: auto;
-  min-width: 42px;
   min-height: 66px;
 }
 
@@ -384,11 +384,14 @@ body {
   list-style-type: none;
 }
 
+.breadcrumbs-item {
+  margin-right: 11px;
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
-  margin-right: 11px;
 }
 
 .catalog-filter-group {
@@ -452,6 +455,9 @@ body {
 .sorting-container .button {
   width: 48px;
   height: 48px;
+}
+
+.sorting-container .button:not(:last-child) {
   margin-right: 8px;
 }
 
