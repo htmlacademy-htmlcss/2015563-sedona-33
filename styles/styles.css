@@ -83,11 +83,11 @@ body {
   color: #000000;
   text-decoration: none;
   min-width: 42px;
+  min-height: 66px;
 }
 
 .navigation-user {
   margin-left: auto;
-  min-height: 66px;
 }
 
 .navigation-user .navigation-link {
@@ -102,6 +102,7 @@ body {
   min-height: 37px;
   text-align: center;
   padding: 9px 15px;
+  text-transform: uppercase;
 }
 
 .main-container {
@@ -488,9 +489,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-
-.hotel-card-all {
   padding: 20px;
 }
 
@@ -498,23 +496,33 @@ body {
   display: grid;
   grid-template-columns: 133px 143px;
   margin: 0;
+  margin-bottom: 16px;
   padding: 0;
   gap: 16px 25px;
 }
 
-.hotel-card-rating {
-  grid-column: span 2;
-  justify-self: end;
+.hotel-card-link {
+
 }
 
-.hotel-card-link {
+.hotel-card-image {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.hotel-card-link-title {
+  text-decoration-line: none;
+}
+
+.hotel-card-title {
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
   color: #000000;
-  text-decoration-line: none;  
-}
+  margin: 0;
+  margin-bottom: 16px;
 
+}
 .button--hotel-card {
   font-size: 16px;
   line-height: 21px;
@@ -524,6 +532,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration-line: none;
+  padding: 9px 0 10px;
 }
 
 .button--hotel-like {
@@ -535,25 +544,31 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration-line: none;
+  padding: 9px 0 10px;
 }
 
 .button--hotel-like-in {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 700;
-  color: #ffffff;
   background: #7DB54F;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration-line: none;
 }
 
 .hotel-card-rating {
+  display: block;
+}
+
+.rating-stars {
+  display: block;
+}
+
+.rating-number {
+  display: block;
   font-size: 16px;
   line-height: 21px;
   background: #F2F2F2;
   text-align: center;
   text-transform: uppercase;
+  width: 160px;
+  padding: 9px 0 10px;
+  margin-left: auto;
 }
 
 .button--load {
@@ -562,9 +577,10 @@ body {
   font-weight: 700;
   color: #ffffff;
   background: #83B3D3;
-  text-align: center;
   text-transform: uppercase;
   border: none;
+  width: 620px;
+  padding: 17px;
 }
 
 .pagination-container {
