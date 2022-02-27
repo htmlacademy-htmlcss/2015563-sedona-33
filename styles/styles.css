@@ -15,7 +15,7 @@
 }
 
 *,
-*::after,
+::after,
 ::before {
   box-sizing: border-box;
 }
@@ -25,16 +25,18 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
+  width: 1200px;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -58,7 +60,7 @@ body {
   position: relative;
   display: flex;
   width: 1200px;
-  height: 70px;
+  height: 66px;
   padding: 0 70px;
   margin: 0 auto;
 }
@@ -70,7 +72,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 460px;   /*345+345/3*/
+  max-width: 460px;
   margin: 0;
   margin-left: 30px;
   padding: 0;
@@ -129,7 +131,7 @@ body {
 .navigation-link-current::before {
   content: "";
   position: absolute;
-  bottom: 2px;
+  bottom: -1px;
   width: 68px;
   height: 2px;
   background-color: #756257;
@@ -139,7 +141,7 @@ body {
 .navigation-link-current-catalog::before {
   content: "";
   position: absolute;
-  bottom: 2px;
+  bottom: -1px;
   width: 93px;
   height: 2px;
   background-color: #756257;
@@ -202,7 +204,6 @@ body {
 .main-container {
   position: relative;
   flex-grow: 1;
-  top: -5px;
 }
 
 .main-index {
@@ -296,7 +297,7 @@ body {
 .advantages-item {
   width: 400px;
   background-color: #F0F6FA;
-  padding: 184px 75px 79px;
+  padding: 184px 75px 89px;
 }
 
 .advantages-item:nth-child(2n) {
@@ -312,7 +313,7 @@ body {
 }
 
 .advantages-number {
-  margin: 0 auto 30px;
+  margin: 0 auto 29px;
 }
 
 .advantages-description {
@@ -384,7 +385,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   width: 575px;
-  padding: 15px;
+  padding: 12px;
   border: none;
   border-radius: 10px;
 }
@@ -434,8 +435,12 @@ body {
 
 .field {
   width: 600px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
   padding: 0;
   padding-left: 22px;
+  background: #F2F2F2;
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -452,6 +457,11 @@ body {
 .field:focus-visible {
   background-color: #E5E5E5;
   outline: #83B3D3 solid 3px;
+}
+
+.input:invalid {
+  background-color: #ffffff;
+  outline: #FF5757 solid 2px;
 }
 
 .subscription-button {
@@ -492,7 +502,7 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  padding: 40px 72px;
+  padding: 40px 72px 40px 58px;
   background-color: #ffffff;
 }
 
@@ -591,8 +601,9 @@ body {
 
 .htmlacademy-link {
   display: block;
-  width: 130px;
-  margin-left: auto;
+  margin: 0;
+  padding: 0 22px;
+  width: 160px;
 }
 
 .htmlacademy-icon:hover > path {
@@ -603,16 +614,10 @@ body {
   fill: rgba(117, 98, 87, 0.3);
 }
 
-.htmlacademy-icon:focus-visible > path {
-  fill: #756257;
-  /*outline: #83B3D3 solid 3px;
-  border-radius: 10px;*/
-}
-
 .htmlacademy-link:focus-visible {
-  border: none;
   outline: #83B3D3 solid 3px;
   border-radius: 10px;
+  outline-offset: 10px;
 }
 
 .inner-block {
@@ -650,7 +655,6 @@ body {
 
 .catalog-filter-form {
   display: flex;
-
 }
 
 .catalog-filter-group {
@@ -772,21 +776,30 @@ body {
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: #000000 solid 2px;
+  outline: #E5E5E5 solid 2px;
   padding: 12px;
   border-radius: 4px;
 }
 
-.card-grid-toggle {
-  border: #E5E5E5 solid 2px;
+.card-grid-toggle:not(:last-child) {
+  margin-right: 8px;
+}
+
+.card-grid-toggle:hover,
+.card-grid-toggle:focus {
+  outline: #83B3D3 solid 2px;
+}
+
+.card-grid-toggle:active {
+  outline: #000000 solid 2px;
 }
 
 .card-grid-toggle-current {
-  border: #000000 solid 2px;
+  outline: #000000 solid 2px;
 }
 
-.card-grid-toggle:not(:last-child) {
-  margin-right: 8px;
+.card-grid-toggle-current:hover {
+  outline: #83B3D3 solid 2px;
 }
 
 .hotels {
@@ -846,12 +859,12 @@ body {
   line-height: 21px;
   font-weight: 700;
   color: #ffffff;
-  background: #756257;
+  background-color: #756257;
   text-align: center;
   text-transform: uppercase;
   text-decoration-line: none;
-  padding: 9px;
   border: none;
+  padding: 9px;
   border-radius: 4px;
 }
 
@@ -860,17 +873,61 @@ body {
   line-height: 21px;
   font-weight: 700;
   color: #ffffff;
-  background: #83B3D3;
+  background-color: #83B3D3;
   text-align: center;
   text-transform: uppercase;
   text-decoration-line: none;
-  padding: 9px;
   border: none;
+  padding: 9px;
   border-radius: 4px;
 }
 
 .button--hotel-like-in {
   background: #7DB54F;
+}
+
+.button--hotel-card:focus {
+  background-color: #615048;
+  outline: #83B3D3 solid 3px;
+}
+
+.button--hotel-card:hover {
+  background-color: #615048;
+}
+
+.button--hotel-card:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--hotel-like:focus {
+  background-color: #68A2CA;
+  outline: #756257 solid 3px;
+}
+
+.button--hotel-like:hover{
+  background-color: #68A2CA;
+  outline: #756257 solid 1px;
+}
+
+.button--hotel-like:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+  outline: #756257 solid 1px;
+}
+
+.button--hotel-like-in:focus {
+  background-color: #6C9E42;
+  outline: #756257 solid 3px;
+}
+
+.button--hotel-like-in:hover {
+  background-color: #6C9E42;
+}
+
+.button--hotel-like-in:active {
+  background-color: #6C9E42;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-card-rating {
@@ -917,6 +974,20 @@ body {
   cursor: pointer;
 }
 
+.button--load:hover {
+  background-color: #68A2CA;
+}
+
+.button--load:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--load:focus-visible {
+  background-color: #68A2CA;
+  outline: #756257 solid 3px;
+}
+
 .pagination-container {
   display: flex;
   padding: 30px 72px 83px;
@@ -932,7 +1003,7 @@ body {
 }
 
 .pagination-link {
-  display: block;
+  display: inline-block;
   width: 55px;
   height: 55px;
   font-size: 20px;
@@ -954,6 +1025,20 @@ body {
 .pagination-current {
   color: #000000;
   background: #F2F2F2;
+}
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-link:focus-visible {
+  background-color: #68A2CA;
+  outline: #756257 solid 3px;
 }
 
 .pagination-filter {
