@@ -70,7 +70,6 @@ body {
   width: 139px;
   z-index: 1;
   outline-offset: 0;
-  outline: 0;
 }
 
 .logo {
@@ -165,13 +164,14 @@ body {
   display: block;
   font-family: inherit;
   font-size: 10px;
+  font-weight: 400;
   line-height: 13px;
   color: #ffffff;
   text-align: center;
   margin: 0;
   padding: 2px;
   top: 17px;
-  left: 25px;
+  left: 27px;
   width: 19px;
   height: 19px;
   background-color: #7DB550;
@@ -208,7 +208,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.navigation-link--button:focus-visible {
+.navigation-link--button:focus {
   background-color: #615048;
   outline-offset: 0;
   outline: #83B3D3 solid 3px;
@@ -410,7 +410,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.search-button:focus-visible {
+.search-button:focus {
   background-color: #615048;
   outline-offset: 0;
   outline: #83B3D3 solid 3px;
@@ -466,7 +466,7 @@ body {
   background-color: #E5E5E5;
 }
 
-.field:focus-visible {
+.field:focus {
   background-color: #E5E5E5;
   outline: #83B3D3 solid 3px;
 }
@@ -500,7 +500,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.subscription-button:focus-visible {
+.subscription-button:focus {
   background-color: #68A2CA;
   outline: #756257 solid 3px;
 }
@@ -569,11 +569,11 @@ body {
   fill: rgba(104, 162, 202, 0.3);
 }
 
-.footer-social-link:focus-visible .social-icon {
+.footer-social-link:focus .social-icon {
   fill: #68A2CA;
 }
 
-.footer-social-link:focus-visible {
+.footer-social-link:focus {
   border: none;
   outline: #83B3D3 solid 3px;
   border-radius: 10px;
@@ -605,7 +605,7 @@ body {
   color: rgba(117, 98, 87, 0.3);
 }
 
-.contacts-phone:focus-visible {
+.contacts-phone:focus {
   color: #756257;
   outline: #83B3D3 solid 3px;
   border-radius: 10px;
@@ -626,7 +626,7 @@ body {
   fill: rgba(117, 98, 87, 0.3);
 }
 
-.htmlacademy-link:focus-visible {
+.htmlacademy-link:focus {
   outline: #83B3D3 solid 3px;
   border-radius: 10px;
   outline-offset: 10px;
@@ -694,7 +694,7 @@ body {
   opacity: 60%;
 }
 
-.breadcrumbs-link:focus-visible {
+.breadcrumbs-link:focus {
   outline: #83B3D3 solid 3px;
   outline-offset: 3px;
   border-radius: 4px;
@@ -789,7 +789,7 @@ body {
   border-radius: 4px;
 }
 
-.button--submit:focus-visible {
+.button--submit:focus {
   background-color: #68A2CA;
   outline: rgba(255, 255, 255, 1) solid 3px;
 }
@@ -804,7 +804,7 @@ body {
   outline: #756257 solid 1px;
 }
 
-.button--reset:focus-visible {
+.button--reset:focus {
   outline: #83B3D3 solid 3px;
 }
 
@@ -858,7 +858,7 @@ body {
   outline: #83B3D3 solid 2px;
 }
 
-.select-control:focus-visible {
+.select-control:focus {
   outline-offset: 0;
   outline: #83B3D3 solid 2px;
 }
@@ -883,7 +883,7 @@ body {
 }
 
 .card-grid-toggle:hover,
-.card-grid-toggle:focus-visible {
+.card-grid-toggle:focus {
   outline: #83B3D3 solid 2px;
 }
 
@@ -959,12 +959,12 @@ body {
   opacity: 30%;
 }
 
-.hotel-card-link:focus-visible {
+.hotel-card-link:focus {
   outline-offset: 0;
   outline: #83B3D3 solid 3px;
 }
 
-.hotel-card-link-title:focus-visible {
+.hotel-card-link-title:focus {
   outline-offset: 0;
   outline: #83B3D3 solid 3px;
 }
@@ -1001,7 +1001,7 @@ body {
   background: #7DB54F;
 }
 
-.button--hotel-card:focus-visible {
+.button--hotel-card:focus {
   background-color: #615048;
   outline-offset: 0;
   outline: #83B3D3 solid 3px;
@@ -1016,7 +1016,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button--hotel-like:focus-visible {
+.button--hotel-like:focus {
   background-color: #68A2CA;
   outline-offset: 0;
   outline: #756257 solid 3px;
@@ -1035,7 +1035,7 @@ body {
   outline: #756257 solid 1px;
 }
 
-.button--hotel-like-in:focus-visible {
+.button--hotel-like-in:focus {
   background-color: #6C9E42;
   outline-offset: 0;
   outline: #756257 solid 3px;
@@ -1048,12 +1048,18 @@ body {
 .button--hotel-like-in:active {
   background-color: #6C9E42;
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .hotel-card-rating {
   display: flex;
-  justify-content: space-between;
+}
+
+.hotel-card-stars {
+  align-self: center;
+}
+
+.hotel-card-stars:not(:last-child) {
+  margin-right: 7px;
 }
 
 .rating-number {
@@ -1063,6 +1069,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   width: 160px;
+  margin-left: auto;
   padding: 9px;
   border: none;
   border-radius: 4px;
@@ -1100,7 +1107,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button--load:focus-visible {
+.button--load:focus {
   background-color: #68A2CA;
   outline-offset: 0;
   outline: #756257 solid 3px;
@@ -1154,7 +1161,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.pagination-link:focus-visible {
+.pagination-link:focus {
   background-color: #68A2CA;
   outline-offset: 0;
   outline: #756257 solid 3px;
