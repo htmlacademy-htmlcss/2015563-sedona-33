@@ -118,21 +118,21 @@
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="radio" name="hotel-group" checked>
-                      <span class="control-mark"></span>
+                      <span class="control-mark control-mark-radio"></span>
                       Гостиница
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="radio" name="hotel-group">
-                      <span class="control-mark"></span>
+                      <span class="control-mark control-mark-radio"></span>
                       Мотель
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="radio" name="hotel-group">
-                      <span class="control-mark"></span>
+                      <span class="control-mark control-mark-radio"></span>
                       Апартаменты
                     </label>
                   </li>
@@ -143,12 +143,16 @@
   
                 <div class="range">
                   <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label">
-                      <input class="range-input" type="number" value="0" name="min-price"> от
-                    </label>
-                    <label class="catalog-filter-label">
-                      <input class="range-input" type="number" value="9000" name="max-price" style="width: 44px"> до
-                    </label>
+                    <div class="range-wrapper-input">
+                      <label class="catalog-filter-label">
+                        <input class="range-input" type="number" value="0" name="min-price"> от
+                      </label>                      
+                    </div>
+                    <div class="range-wrapper-input">
+                      <label class="catalog-filter-label">
+                        <input class="range-input" type="number" value="9000" name="max-price" style="width: 44px"> до
+                      </label>
+                    </div>
                   </div>
 
                   <div class="range-scale">

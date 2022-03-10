@@ -117,7 +117,6 @@ body {
   height: 2px;
   background-color: #756257;
   content: "";
-  z-index: 1;
 }
 
 .navigation-icon {
@@ -226,7 +225,7 @@ body {
 .main-inner {  
   font-size: 18px;
   line-height: 23px;
-  color: #333333;
+  /*color: #333333;*/
 }
 
 .page-container {
@@ -493,6 +492,7 @@ body {
 
 .subscription-button:hover {
   background-color: #68A2CA;
+
 }
 
 .subscription-button:active {
@@ -632,6 +632,277 @@ body {
   outline-offset: 10px;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 23px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-auth {
+  width: 715px;
+  height: 561px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../images/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: #83B3D3 solid 3px;
+}
+
+.modal-close-button:active .modal-close {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  width: 575px;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  height: 67px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.search-form {
+  position: relative;
+  display: grid;
+  grid-template-columns: 155px 133px 154px 133px;
+  row-gap: 40px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.form-label {
+  grid-column: 1/2;
+}
+
+.form-label-icon {
+  grid-column: 3/4;
+  margin-left: 56px;
+  display: flex;
+}
+
+.modal-field {
+  appearance: none;
+  width: 420px;
+  height: 50px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  padding: 0 19px;  
+  background: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-field:hover {
+  background: #E6E6E6;
+}
+
+.modal-field:focus {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-field:active {
+  background: #ffffff;
+  outline: 2px solid #000000;
+  color: #000000;
+}
+
+.field-number {
+  width: 79px;
+  text-align: center;
+}
+
+.children {
+  margin-right: 58px;
+  align-self: center;
+}
+
+.adults-box,
+.children-box {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.button-minus {
+  width: 25px;
+  height: 25px;
+  padding: 0 6px;
+}
+
+.button-plus {
+  width: 25px;
+  height: 25px;
+}
+
+.search-submit {
+  grid-column: 1/-1;
+  padding: 10px;
+  width: 575px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.search-submit:hover {
+  background-color: #68A2CA;
+}
+
+.search-submit:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.search-submit:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.arrival-date::after {
+  position: absolute;
+  top: 18px;
+  right: 19px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background-image: url("../images/modal-date.svg");
+  background-repeat: no-repeat;
+}
+
+.departure-data::after {
+  position: absolute;
+  top: 108px;
+  right: 19px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background-image: url("../images/modal-date.svg");
+  background-repeat: no-repeat;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 14px;
+  margin-left: 54px;
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #68A2CA;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  transform: rotate(360deg);
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .inner-block {
   background: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
@@ -696,7 +967,6 @@ body {
 
 .breadcrumbs-link:focus {
   outline: #83B3D3 solid 3px;
-  outline-offset: 3px;
   border-radius: 4px;
 }
 
@@ -747,21 +1017,34 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.control:hover .control-mark-radio {
+  background-color: #ffffff;
+}
+
+.control:active .control-mark-radio {
+  background-color: #ffffff;
+}
+
+.control:focus .control-mark-radio {
+  background-color: #ffffff;
+  outline: #83B3D3 solid 3px;
+}
+
 .control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
+}  
 
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
-}
+}  
 
 .control-input[type="radio"]:checked + .control-mark {
   background-image: url("../images/ellipse.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
+}  
 
 .catalog-filter-list {
   margin: 0;
@@ -812,8 +1095,18 @@ body {
 .range-wrapper-inputs {
   display: flex;
   margin-bottom: 32px;
+}
+
+.range-wrapper-input:first-child {
   border: #ffffff solid 2px;
-  border-radius: 4px;
+  border-right: #ffffff solid 1px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.range-wrapper-input:last-child {
+  border: #ffffff solid 2px;
+  border-left: #ffffff solid 1px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .catalog-filter-label {
@@ -824,10 +1117,6 @@ body {
   padding: 14px 14px 11px 17px;
   justify-content: space-between;
   align-items: center;
-}
-
-.catalog-filter-label:first-child {
-  border-right: #ffffff solid 2px;
 }
 
 .range-input {
@@ -845,6 +1134,26 @@ body {
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.range-wrapper-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-label:first-child:hover {
+  border-right: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-label:last-child:hover {
+  border-left: rgba(255, 255, 255, 0.6);
+}
+
+.range-wrapper-input:focus {
+  box-shadow: 0px 0px 0px 3px #81B3D2;
+}
+
+.range-wrapper-input:active {
+  background: #756257;
 }
 
 .range-scale {
@@ -870,11 +1179,11 @@ body {
 }
 
 .range-toggle:active {
-  outline: #83B3D3 solid 3px;
+  outline: #83B3D3 solid 2px;
 }
 
 .range-toggle:focus {
-  outline: #83B3D3 solid 2px;
+  outline: #83B3D3 solid 3px;
 }
 
 .toggle-min {
@@ -983,8 +1292,13 @@ body {
   line-height: 23px;
   width: 287px;
   height: 48px;
-  color: #333333;
   padding-left: 19px;
+  padding-right: 48px;
+  background-image: url(../images/dropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  /*opacity: 30%;*/
+  appearance: none;
   border: 0;
   outline: #E5E5E5 solid 2px;
   border-radius: 4px;
@@ -1311,13 +1625,19 @@ body {
 }
 
 .pagination-control {
+  font: inherit;
   width: 160px;
   height: 48px;
-  padding: 0 17px;
+  padding: 0 48px 0 17px;
+  background-image: url(../images/dropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  appearance: none;
   border: 0;
   outline: #E5E5E5 solid 2px;
   border-radius: 4px;
   cursor: pointer;
+  /*opacity: 30%;*/
 }
 
 .pagination-control:hover {
