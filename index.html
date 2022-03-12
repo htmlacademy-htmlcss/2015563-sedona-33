@@ -269,7 +269,7 @@
       </div>
     </footer>
 
-    <div class="modal-container">
+    <div class="modal-container"> <!-- modal-container-close-->
       <div class="modal modal-auth">
         <button class="modal-close-button">
           <span class="visually-hidden">
@@ -283,15 +283,21 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
 
-            <label class="form-label arrival-date" for="arrival-date">
+            <label class="form-label" for="arrival-date">
               Дата заезда:
             </label>
-            <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020"> 
+            <div class="modal-field-wrapper">
+              <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
+              <span class="modal-field-error">Мы не можем отправить вас в прошлое.</span> 
+            </div>
 
-            <label class="form-label departure-data" for="departure-data">
+            <label class="form-label" for="departure-data">
               Дата выезда:
             </label>
-            <input class="modal-field" type="text" id="departure-time" name="departure-time" placeholder="1 сентября 2021">
+            <div class="modal-field-wrapper">
+              <input class="modal-field" type="text" id="departure-time" name="departure-time" placeholder="Укажите дату">
+              <span class="modal-field-correct">На эти даты есть свободные номера. Пока есть.</span> 
+            </div>
 
             <label class="form-label adults" for="search-adults">
               Взрослые:
@@ -302,7 +308,7 @@
                   <path d="M0 0v1h13V0H0Z"/>
                 </svg>
               </button>
-              <input class="modal-field field-number" type="text" id="search-adults" name="search-adults" placeholder="2">
+              <input class="modal-field field-number" type="text" id="search-adults" name="search-adults" placeholder="0">
               <button class="button button-plus" type="button" aria-label="Увеличить.">
                 <svg class="math-symbol" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="#000000" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
@@ -330,7 +336,7 @@
                     <path d="M0 0v1h13V0H0Z"/>
                   </svg>
                 </button>
-                <input class="modal-field field-number" type="text" id="search-children" name="search-children" placeholder="1">
+                <input class="modal-field field-number" type="text" id="search-children" name="search-children" placeholder="0">
                 <button class="button button-plus" type="button" aria-label="Увеличить.">
                   <svg class="math-symbol" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="#000000" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>

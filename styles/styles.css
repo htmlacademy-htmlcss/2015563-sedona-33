@@ -651,7 +651,7 @@ body {
 .modal {
   position: relative;
   margin: auto;
-  padding: 62px 70px 23px 70px;
+  padding: 62px 70px 70px 70px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
@@ -659,7 +659,6 @@ body {
 
 .modal-auth {
   width: 715px;
-  height: 561px;
 }
 
 .modal-close-button {
@@ -672,9 +671,6 @@ body {
   background-color: #F2F2F2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/modal-close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
 }
 
@@ -710,7 +706,7 @@ body {
 .search-form {
   position: relative;
   display: grid;
-  grid-template-columns: 155px 133px 154px 133px;
+  grid-template-columns: 154px 133px 155px 133px;
   row-gap: 40px;
   align-items: center;
   font-weight: 700;
@@ -720,15 +716,24 @@ body {
   grid-column: 1/2;
 }
 
+.modal-field-wrapper {
+  position: relative;
+  grid-column: 2/-1;
+}
+
 .form-label-icon {
   grid-column: 3/4;
   margin-left: 56px;
   display: flex;
 }
 
+.children-box {
+  grid-column: 4/5;
+}
+
 .modal-field {
   appearance: none;
-  width: 420px;
+  width: 100%;
   height: 50px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -739,6 +744,26 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.modal-field-error,
+.modal-field-correct {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  left: 0;
+  bottom: -34px;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.modal-field-error {
+  color: #FF5757;
+}
+
+.modal-field-correct {
+  color: #333333;
 }
 
 .modal-field:hover {
@@ -753,17 +778,6 @@ body {
 .modal-field:active {
   background: #ffffff;
   outline: 2px solid #000000;
-  color: #000000;
-}
-
-.field-number {
-  width: 79px;
-  text-align: center;
-}
-
-.children {
-  margin-right: 58px;
-  align-self: center;
 }
 
 .adults-box,
@@ -772,17 +786,64 @@ body {
   align-items: center;
   background-color: #F2F2F2;
   border-radius: 4px;
+  padding: 0 13px;
+  justify-content: space-between;
+}
+
+.field-number {
+  width: 52px;
+  text-align: center;
+  padding: 0;
+}
+
+.field-number:hover,
+.field-number:focus,
+.field-number:active {
+  background: #F2F2F2;
+  border: #F2F2F2 solid 3px;
+  outline: none;
+}
+
+.field-number:active::placeholder {
+  color:#000000;
+}
+
+.children {
+  margin-right: 58px;
+  align-self: center;
 }
 
 .button-minus {
   width: 25px;
   height: 25px;
-  padding: 0 6px;
+  padding: 0 6px 12px;
+  background-color: transparent;
+  opacity: 30%;
 }
 
 .button-plus {
   width: 25px;
   height: 25px;
+  padding: 6px;
+  background-color: transparent;
+  opacity: 30%;
+}
+
+.button-minus:hover,
+.button-plus:hover {
+  opacity: 1;
+}
+
+.button-minus:focus,
+.button-plus:focus {
+  opacity: 1;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-minus:active,
+.button-plus:active {
+  opacity: 20%;
 }
 
 .search-submit {
@@ -814,27 +875,19 @@ body {
   color: rgba(255, 255, 255, 0.3)
 }
 
-.arrival-date::after {
+.modal-field-wrapper::after {
   position: absolute;
-  top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 19px;
   width: 15px;
   height: 15px;
   content: "";
   background-image: url("../images/modal-date.svg");
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
-.departure-data::after {
-  position: absolute;
-  top: 108px;
-  right: 19px;
-  width: 15px;
-  height: 15px;
-  content: "";
-  background-image: url("../images/modal-date.svg");
-  background-repeat: no-repeat;
-}
 
 .tooltip {
   position: absolute;
@@ -1127,6 +1180,7 @@ body {
   text-align: center;
   background-color: transparent;
   border: none;
+  outline: none;
   appearance: textfield;
 }
 
