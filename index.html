@@ -269,5 +269,88 @@
       </div>
     </footer>
 
+    <div class="modal-container"> <!-- modal-container-close-->
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">
+            Закрыть
+          </span>
+          <svg class="modal-close" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+          </svg>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <label class="form-label" for="arrival-date">
+              Дата заезда:
+            </label>
+            <div class="modal-field-wrapper">
+              <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
+              <span class="modal-field-error">Мы не можем отправить вас в прошлое.</span> 
+            </div>
+
+            <label class="form-label" for="departure-data">
+              Дата выезда:
+            </label>
+            <div class="modal-field-wrapper">
+              <input class="modal-field" type="text" id="departure-time" name="departure-time" placeholder="Укажите дату">
+              <span class="modal-field-correct">На эти даты есть свободные номера. Пока есть.</span> 
+            </div>
+
+            <label class="form-label adults" for="search-adults">
+              Взрослые:
+            </label>
+            <div class="adults-box">
+              <button class="button button-minus" type="button" aria-label="Уменьшить.">
+                <svg class="math-symbol" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0v1h13V0H0Z"/>
+                </svg>
+              </button>
+              <input class="modal-field field-number" type="text" id="search-adults" name="search-adults" placeholder="0">
+              <button class="button button-plus" type="button" aria-label="Увеличить.">
+                <svg class="math-symbol" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                </svg>
+              </button>
+            </div>
+            
+            <span class="form-label form-label-icon">              
+              <label class="form-label children" for="search-children">
+                Дети:
+              </label>
+  
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                  <svg class="tooltip-icon" width="25" height="25" fill="currentColor" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12.5" cy="12.5" r="12.5" fill="#83B3D3"/><g clip-path="url(#a)" fill="#fff">
+                    <path d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(12 8)" d="M0 0h1v9H0z"/></clipPath></defs>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+              
+              <div class="children-box">
+                <button class="button button-minus" type="button" aria-label="Уменьшить.">
+                  <svg class="math-symbol" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z"/>
+                  </svg>
+                </button>
+                <input class="modal-field field-number" type="text" id="search-children" name="search-children" placeholder="0">
+                <button class="button button-plus" type="button" aria-label="Увеличить.">
+                  <svg class="math-symbol" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </span>
+            
+            <button class="button search-submit" type="submit">Найти</button>            
+
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>
