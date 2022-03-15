@@ -62,7 +62,7 @@
 
     <main class="main-container main-inner">
       <div class="page-container">
-        <div class="inner-block">
+        <section class="inner-block">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs-list">
@@ -143,16 +143,14 @@
   
                 <div class="range">
                   <div class="range-wrapper-inputs">
-                    <div class="range-wrapper-input">
-                      <label class="catalog-filter-label">
-                        <input class="range-input" type="number" value="0" name="min-price"> от
-                      </label>                      
-                    </div>
-                    <div class="range-wrapper-input">
-                      <label class="catalog-filter-label">
-                        <input class="range-input" type="number" value="9000" name="max-price" style="width: 44px"> до
-                      </label>
-                    </div>
+                    <label class="catalog-filter-label">
+                      <input class="range-input" type="number" value="0" name="min-price">
+                      <span class="range-input-text">от</span>
+                    </label>                    
+                    <label class="catalog-filter-label">
+                      <input class="range-input" type="number" value="9000" name="max-price">
+                      <span class="range-input-text">до</span>
+                    </label>
                   </div>
 
                   <div class="range-scale">
@@ -178,19 +176,19 @@
               </div>
             </form>             
           </section>
-        </div>
+        </section>
   
         <section class="select">
           <h2 class="visually-hidden">Сортировка</h2>
           <span class="select-filter">Найдено гостиниц: 38</span>
+          <div class="sorting-type">
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>                             
+            </select>
+          </div>
           <div class="sorting-container">
-            <div class="sorting-type">
-              <select class="select-control" aria-label="Сортировка">
-                <option value="cheap">Сначала дешёвые</option>
-                <option value="expensive">Сначала дорогие</option>
-                <option value="popular">Сначала популярные</option>                             
-              </select>
-            </div>
             <a href="#" class="card-grid-toggle card-grid-toggle-current" type="button">
               <svg width="16" height="14" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 0H0v6h4V0Zm12 0h-4v6h4V0Zm-6 0H6v6h4V0ZM4 8H0v6h4V8Zm12 0h-4v6h4V8Zm-6 0H6v6h4V8Z" fill="#000"/>
@@ -398,7 +396,7 @@
           </h2>
           <address class="contact-address">
             <a class="contacts-phone" href="tel:+78121212">
-              +7 (812) 812-12-12-12
+              +7 (812) 812-12-12
             </a>
           </address> 
         </section>
