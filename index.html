@@ -180,7 +180,7 @@
 
     <div class="modal-container modal-container-close">
       <div class="modal modal-auth">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
           <svg class="modal-close" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
@@ -192,13 +192,13 @@
 
             <label class="form-label" for="arrival-date">Дата заезда:</label>
             <div class="modal-field-wrapper">
-              <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
+              <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату" required>
               <span class="modal-field-error">Мы не можем отправить вас в прошлое.</span> 
             </div>
 
             <label class="form-label" for="departure-data">Дата выезда:</label>
             <div class="modal-field-wrapper">
-              <input class="modal-field" type="text" id="departure-data" name="departure-time" placeholder="Укажите дату">
+              <input class="modal-field" type="text" id="departure-data" name="departure-time" placeholder="Укажите дату" required>
               <span class="modal-field-correct">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
